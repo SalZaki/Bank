@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyTitle>Payment.Bank.Infrastructure</AssemblyTitle>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>Payment Bank Infrastructure</Title>
+    <Description>Payment Bank Infrastructure Project</Description>
+    <RootNamespace>Payment.Bank.Infrastructure</RootNamespace>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+  </PropertyGroup>
+</Project>

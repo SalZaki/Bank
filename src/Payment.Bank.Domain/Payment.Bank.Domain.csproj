@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyTitle>Payment.Bank.Domain</AssemblyTitle>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>Payment Bank Domain</Title>
+    <Description>Payment Bank Domain Project</Description>
+    <RootNamespace>Payment.Bank.Domain</RootNamespace>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyTitle>Payment.Bank.Api</AssemblyTitle>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>Payment Bank Api</Title>
+    <Description>Payment Bank Api Project</Description>
+    <RootNamespace>Payment.Bank.Api</RootNamespace>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+  </PropertyGroup>
+</Project>
