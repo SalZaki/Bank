@@ -1,6 +1,6 @@
 title: Bank Microservice
 description: SalZaki Bank Microservice pages.
-remote_theme: pmarsceill/just-the-docs
+theme: just-the-docs
 
 aux_links:
   "SalZaki.Bank on GitHub": https://github.com/salzaki/Bank
