@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Overview
 nav_order: 1
 has_children: false
@@ -26,7 +26,7 @@ This microservice provides banking functionalities through a clean architecture 
 
 ## Solution Structure
 
-````bash
+````
 bank/
 │
 ├── src/
