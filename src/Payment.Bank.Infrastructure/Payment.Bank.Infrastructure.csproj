@@ -9,4 +9,10 @@
     <RootNamespace>Payment.Bank.Infrastructure</RootNamespace>
     <NeutralLanguage>en-GB</NeutralLanguage>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Payment.Bank.Application\Payment.Bank.Application.csproj" />
+  </ItemGroup>
 </Project>
