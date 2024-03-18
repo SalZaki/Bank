@@ -1,6 +1,6 @@
 using Payment.Bank.Common.Extensions;
 
-namespace Payment.Bank.Application;
+namespace Payment.Bank.Common.Utilities;
 
 public static class ErrorCodes
 {

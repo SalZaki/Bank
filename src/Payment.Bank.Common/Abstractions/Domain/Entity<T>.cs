@@ -12,11 +12,11 @@ public abstract record Entity<TId>(TId Id) : IEntity<TId>
 
     public string? ModifiedBy { get; set; }
 
-    protected void CheckPolicy(IBusinessPolicy businessRule)
+    protected void CheckPolicy(IBusinessPolicy businessPolicy)
     {
-        if (businessRule.IsInvalid())
+        if (businessPolicy.IsInvalid())
         {
-            throw new BusinessPolicyValidationException(businessRule);
+            throw new BusinessPolicyValidationException(businessPolicy);
         }
     }
 }

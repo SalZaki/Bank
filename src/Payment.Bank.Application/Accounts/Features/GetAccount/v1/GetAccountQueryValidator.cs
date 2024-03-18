@@ -1,4 +1,5 @@
 using FluentValidation;
+using Payment.Bank.Common.Utilities;
 using Payment.Bank.Domain.ValueObjects;
 
 namespace Payment.Bank.Application.Accounts.Features.GetAccount.v1;

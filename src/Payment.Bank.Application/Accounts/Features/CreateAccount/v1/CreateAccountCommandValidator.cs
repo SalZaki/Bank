@@ -1,6 +1,7 @@
 using Ardalis.GuardClauses;
 using FluentValidation;
 using Payment.Bank.Application.Accounts.Repositories;
+using Payment.Bank.Common.Utilities;
 using Payment.Bank.Domain.Entities;
 using Payment.Bank.Domain.ValueObjects;
 
