@@ -109,7 +109,7 @@ docker-compose build
 ````shell
 docker-compose up
 ````
-![Docker](../assets/Docker.png)
+![Docker](assets/Docker.png)
 
 ### AppSettings
 
@@ -200,7 +200,7 @@ After successfully launching the application either locally or as a Docker conta
 
 `http://localhost:5000/api-docs/index.html`
 
-![Swagger](../assets/Swagger.png)
+![Swagger](assets/Swagger.png)
 
 This URL will provide you with comprehensive documentation for interacting with the API, including details on available endpoints, request parameters, response formats, and more.
 
@@ -210,9 +210,9 @@ Additionally, you can make API requests directly from the command line using cUR
 
 ## Structured Logging
 
-![Seq](../assets/Seq-Dashboard.png)
+![Seq](assets/Seq-Dashboard.png)
 
-![Seq](../assets/Seq-StructuredLogging.png)
+![Seq](assets/Seq-StructuredLogging.png)
 
 ## Roadmap
 
