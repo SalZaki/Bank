@@ -6,7 +6,17 @@
     <Nullable>enable</Nullable>
     <Title>Payment Application</Title>
     <Description>Payment Bank Application Project</Description>
-    <RootNamespace>Payment.Application</RootNamespace>
+    <RootNamespace>Payment.Bank.Application</RootNamespace>
     <NeutralLanguage>en-GB</NeutralLanguage>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" />
+    <PackageReference Include="OneOf" />
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="Microsoft.Extensions.Logging" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Payment.Bank.Common\Payment.Bank.Common.csproj" />
+    <ProjectReference Include="..\Payment.Bank.Domain\Payment.Bank.Domain.csproj" />
+  </ItemGroup>
 </Project>

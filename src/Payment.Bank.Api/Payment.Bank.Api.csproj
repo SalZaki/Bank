@@ -8,5 +8,29 @@
     <Description>Payment Bank Api Project</Description>
     <RootNamespace>Payment.Bank.Api</RootNamespace>
     <NeutralLanguage>en-GB</NeutralLanguage>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" />
+    <PackageReference Include="Figgle" />
+    <PackageReference Include="Bogus" />
+    <PackageReference Include="Spectre.Console" />
+    <PackageReference Include="Serilog" />
+    <PackageReference Include="Serilog.Sinks.Seq" />
+    <PackageReference Include="Serilog.Sinks.Console" />
+    <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="Serilog.Enrichers.Environment" />
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="Microsoft.FeatureManagement.AspNetCore" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Payment.Bank.Common/Payment.Bank.Common.csproj" />
+    <ProjectReference Include="../Payment.Bank.Application/Payment.Bank.Application.csproj" />
+    <ProjectReference Include="../Payment.Bank.Infrastructure/Payment.Bank.Infrastructure.csproj" />
+  </ItemGroup>
 </Project>

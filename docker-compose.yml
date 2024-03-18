@@ -1,0 +1,35 @@
+﻿services:
+
+  bank.api:
+    image: bank.api
+    container_name: bank.api
+    build:
+      context: .
+      dockerfile: src/Payment.Bank.Api/Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - bank.seq
+    environment:
+      - ASPNETCORE_URLS=http://*:5000
+      - ASPNETCORE_PATHBASE=/bank
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - BANK_Serilog:WriteTo:1:Args:serverUrl=http://bank.seq:80
+    networks:
+      - bank-network
+
+  bank.seq:
+    image: datalust/seq:latest
+    container_name: bank.seq
+    restart: always
+    ports:
+      - "5341:80"
+    environment:
+      - ACCEPT_EULA=Y
+    networks:
+      - bank-network
+
+networks:
+  bank-network:
+    name: bank-network
+    driver: bridge

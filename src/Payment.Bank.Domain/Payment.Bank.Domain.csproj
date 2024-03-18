@@ -9,4 +9,10 @@
     <RootNamespace>Payment.Bank.Domain</RootNamespace>
     <NeutralLanguage>en-GB</NeutralLanguage>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Payment.Bank.Common/Payment.Bank.Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" />
+  </ItemGroup>
 </Project>

@@ -4,8 +4,10 @@ title: Overview
 nav_order: 1
 has_children: false
 ---
-<a href="https://twitter.com/intent/follow?screen_name=sal_zaki"><img src="https://camo.githubusercontent.com/a4e7c9bc9e98548731968d0ea64f33ecb10231adef598d8d011e4056292052c4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2532302d547769747465722d2532333144413146323f6c6f676f3d74776974746572266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" data-canonical-src="https://img.shields.io/badge/%20-Twitter-%231DA1F2?logo=twitter&amp;logoColor=white&amp;style=for-the-badge" style="max-width: 100%;" alt="" /></a>
-<a href="https://www.linkedin.com/in/sal-zaki-b39369172" rel="nofollow"><img src="https://camo.githubusercontent.com/fffc9c5f5340c6adbdc00b39d9dc9fcb2e5ea2f0974226acaa542e4524090c5e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2532302d4c696e6b6564496e2d2532333041363643323f6c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765266c696e6b3d68747470733a2f2f7777772e6c696e6b6564696e2e636f6d2f696e2f6d65686469686164656c69" data-canonical-src="https://img.shields.io/badge/%20-LinkedIn-%230A66C2?logo=linkedin&amp;logoColor=white&amp;style=for-the-badge&amp;link=https://www.linkedin.com/in/sal-zaki-b39369172" style="max-width: 100%;" alt="Sal Zaki's linkedin" /></a>
+
+<a href="https://github.com/salzaki" alt="sal zaki's github"><img src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=181717&logo=GitHub&logoColor=FFFFFF&label=" /></a>
+<a href="https://www.linkedin.com/in/sal-zaki-b39369172/" alt="sal zaki's linkedin"><img src="https://img.shields.io/static/v1?style=for-the-badge&message=LinkedIn&color=0A66C2&logo=LinkedIn&logoColor=FFFFFF&label=" /></a>
+<a href="https://twitter.com/sal_zaki" alt="sal zaki's twitter"><img src="https://img.shields.io/static/v1?style=for-the-badge&message=Twitter&color=1DA1F2&logo=Twitter&logoColor=FFFFFF&label=" /></a>
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?logoColor=white&style=for-the-badge)](http://commitizen.github.io/cz-cli/) [![build](https://github.com/salzaki/bank/actions/workflows/test-dotnet.yml/badge.svg)](https://github.com/salzaki/bank/actions/workflows/test-dotnet.yml)
 
