@@ -34,15 +34,14 @@ bank/
 │   │   └── Startup.cs
 │   │
 │   ├── Payment.Bank.Application/
-│   │   ├── Accounts/
-│   │   │   └── Features/
-│   │   │       ├── ActivateAccount/
-│   │   │       ├── CreateAccount/
-│   │   │       ├── DeactivateAccount/
-│   │   │       └── GetAccount/
-│   │   ├── Repositories/
-│   │   ├── Services/
-│   │   └── ErrorCodes.cs/
+│   │   └── Accounts/
+│   │       ├── Features/
+│   │       │   ├── ActivateAccount/
+│   │       │   ├── CreateAccount/
+│   │       │   ├── DeactivateAccount/
+│   │       │   └── GetAccount/
+│   │       ├── Repositories/
+│   │       └── Services/
 │   │
 │   ├── Payment.Bank.Common/
 │   │   ├── Abstractions/
