@@ -40,15 +40,14 @@ bank/
 │   │   └── Startup.cs
 │   │
 │   ├── Payment.Bank.Application/
-│   │   ├── Accounts/
-│   │   │   └── Features/
-│   │   │       ├── ActivateAccount/
-│   │   │       ├── CreateAccount/
-│   │   │       ├── DeactivateAccount/
-│   │   │       └── GetAccount/
-│   │   ├── Repositories/
-│   │   ├── Services/
-│   │   └── ErrorCodes.cs/
+│   │   └── Accounts/
+│   │       ├── Features/
+│   │       │   ├── ActivateAccount/
+│   │       │   ├── CreateAccount/
+│   │       │   ├── DeactivateAccount/
+│   │       │   └── GetAccount/
+│   │       ├── Repositories/
+│   │       └── Services/
 │   │
 │   ├── Payment.Bank.Common/
 │   │   ├── Abstractions/
@@ -209,6 +208,7 @@ Additionally, you can make API requests directly from the command line using cUR
 `curl -X GET http://localhost:5000/api/v1/accounts/1234`
 
 ## Structured Logging
+For structured logging you can use 
 
 ![Seq](assets/Seq-Dashboard.png)
 

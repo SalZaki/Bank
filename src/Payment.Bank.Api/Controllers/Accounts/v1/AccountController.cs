@@ -13,7 +13,7 @@ using Payment.Bank.Application.Accounts.Features.GetAccount.v1;
 using Payment.Bank.Application.Accounts.Features.CreateAccount.v1;
 using Payment.Bank.Application.Accounts.Features.DeactivateAccount.v1;
 
-namespace Payment.Bank.Api.Controllers.v1.Accounts;
+namespace Payment.Bank.Api.Controllers.Accounts.v1;
 
 [ApiController]
 [ApiVersion("1.0", Deprecated = false)]
