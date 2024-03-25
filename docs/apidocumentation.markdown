@@ -11,7 +11,7 @@ After successfully launching the application either locally or as a Docker conta
 http://localhost:5000/api-docs/index.html
 ```
 
-![Swagger](assets/Swagger.png)
+![Swagger](../assets/Swagger.png)
 
 This URL will provide you with comprehensive documentation for interacting with the API, including details on available endpoints, request parameters, response formats, and more.
 
