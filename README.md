@@ -1,6 +1,5 @@
 <a href="https://twitter.com/intent/follow?screen_name=sal_zaki"><img src="https://camo.githubusercontent.com/a4e7c9bc9e98548731968d0ea64f33ecb10231adef598d8d011e4056292052c4/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2532302d547769747465722d2532333144413146323f6c6f676f3d74776974746572266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765" data-canonical-src="https://img.shields.io/badge/%20-Twitter-%231DA1F2?logo=twitter&amp;logoColor=white&amp;style=for-the-badge" style="max-width: 100%;" alt="" /></a>
 <a href="https://www.linkedin.com/in/sal-zaki-b39369172" rel="nofollow"><img src="https://camo.githubusercontent.com/fffc9c5f5340c6adbdc00b39d9dc9fcb2e5ea2f0974226acaa542e4524090c5e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2532302d4c696e6b6564496e2d2532333041363643323f6c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d7768697465267374796c653d666f722d7468652d6261646765266c696e6b3d68747470733a2f2f7777772e6c696e6b6564696e2e636f6d2f696e2f6d65686469686164656c69" data-canonical-src="https://img.shields.io/badge/%20-LinkedIn-%230A66C2?logo=linkedin&amp;logoColor=white&amp;style=for-the-badge&amp;link=https://www.linkedin.com/in/sal-zaki-b39369172" style="max-width: 100%;" alt="Sal Zaki's linkedin" /></a>
-
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?logoColor=white&style=for-the-badge)](http://commitizen.github.io/cz-cli/)
 
 # Bank Microservice
@@ -15,7 +14,7 @@ This microservice provides banking functionalities through a clean architecture 
 ## Technologies Used
 <a href="https://dotnet.microsoft.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" width="54" height="54" alt="dotnet" style="vertical-align:top; margin:4px;" /></a>
 <a href="https://hub.docker.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" width="54" height="54" alt="docker" style="vertical-align:top; margin:4px" /></a>
-<a href=""><img src="https://datalust.co/img/seq-logo-dark.svg" alt="seq" width="54" height="54" style="vertical-align:top; margin:4px;" /></a>
+<a href="https://datalust.co/"><img src="https://datalust.co/img/seq-logo-dark.svg" alt="seq" width="54" height="54" style="vertical-align:top; margin:4px;" /></a>
 
 ## Solution Structure
 
@@ -108,7 +107,7 @@ docker-compose up
 
 #### Api Settings
 
-```json
+``` config
 "Api": {
   "Name": "Bank-Api",
   "Version": "1.0",
@@ -118,14 +117,14 @@ docker-compose up
   "DocumentationUrl": "api/v1/documentation/",
   "BannerEnabled": true,
   "Authorization": {
-    "ApiKey": "b481d913-aef1-4913-b8b6-d890a89e22d3"  // not being used yet
+    "ApiKey": "b481d913-aef1-4913-b8b6-d890a89e22d3"
   }
 }
 ```
 
 #### Swagger Settings
 
-```json
+``` config
 "Swagger": {
   "Enabled": true,
   "Name": "Bank-Api",
@@ -149,7 +148,7 @@ docker-compose up
 
 #### Feature Management Settings
 
-```json
+``` config
 "FeatureManagement": {
   "CreateAccount": true,
   "GetAccount": true,
@@ -160,7 +159,7 @@ docker-compose up
 
 ## Account Controller with Feature Gate
 
-```csharp
+``` csharp
 [HttpGet("{accountNumber:int}", Name = "GetByAccountNumber")]
 [FeatureGate(Constants.Features.GetAccount)]
 [SwaggerOperation(
@@ -180,6 +179,7 @@ public async Task<Results<Ok<GetAccountResponse>, BadRequest<ProblemDetails>, No
 }
 ```
 ### Business Policies - Not implemented Yet
+
 ```csharp
 public void Deposit(decimal amount)
 {
@@ -191,7 +191,9 @@ public void Deposit(decimal amount)
 ## API Documentation
 After successfully launching the application either locally or as a Docker container, you can access the API documentation by navigating to the following URL in your web browser:
 
-`http://localhost:5000/api-docs/index.html`
+``` console
+http://localhost:5000/api-docs/index.html
+```
 
 ![Swagger](assets/Swagger.png)
 
@@ -199,7 +201,58 @@ This URL will provide you with comprehensive documentation for interacting with 
 
 Additionally, you can make API requests directly from the command line using cURL. Here's an example command to get started,
 
-`curl -X GET http://localhost:5000/api/v1/accounts/1234`
+``` console
+curl -X GET http://localhost:5000/api/v1/accounts/1234
+```
+
+### Account Endpoint - Manage Bank Accounts
+
+#### Create Account
+![POST](https://img.shields.io/badge/POST-5673db)
+
+**Endpoint:** `/v1/account`
+
+**Description:** This endpoint allows the creation of a new bank account.
+
+**Body parameters:**
+
+| Parameter Name       | Type   | Mandatory | Validation                                | Description                              |
+|:---------------------|:-------|:----------|:------------------------------------------|:-----------------------------------------| 
+| account_id           | string | No        | Max length: 100 characters                | Unique identifier for the account        |
+| account_number       | string | No        | Max length: 100 characters                | Account number                           |
+| account_holder_name  | string | Yes       | Max length: 50 characters                 | Name of the account holder               |
+| account_balance      | string | No        | >=0                                       | Initial account balance                  |
+| account_type         | string | No        |                                           | "0" for Current, "1" for Savings Account |
+| sort_code            | int    | No        | Max length: 6, Greater than or equal to 0 | UK bank sort code                        |
+| iban                 | string | No        |                                           | International Bank Account Number (IBAN) |
+
+**Note:**
+- Mandatory fields are indicated by "Yes" under the Mandatory column.
+- "account_type" should be set to "0" for Current Account or "1" for Savings Account.
+
+**Response Body:**
+
+``` json
+{
+  "account_id": "123456"
+}
+```
+
+**Response Header:**
+
+``` json
+access-control-allow-methods: PUT,GET,HEAD,POST,DELETE,OPTIONS
+access-control-allow-origin: http://localhost:5000
+api-supported-versions: 1.0
+content-type: application/json; charset=utf-8
+location: api/v1/account/123456
+```
+
+**Response Status Code:**
+
+``` json
+HTTP/1.1 201 Created
+```
 
 ## Structured Logging
 
@@ -218,10 +271,11 @@ List of features/tasks/approaches to add:
 | Integration Automated Tests | To do  | TBA          |
 
 ## Resources and References
-#### Seq
+
+### Seq
 - [Seq Documentation](https://docs.datalust.co/docs/an-overview-of-seq)
 
-#### Domain-Driven Design
+### Domain-Driven Design
 
 - ["Domain-Driven Design: Tackling Complexity in the Heart of Software"](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215) book, Eric Evans
 - ["Implementing Domain-Driven Design"](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577) book, Vaughn Vernon
