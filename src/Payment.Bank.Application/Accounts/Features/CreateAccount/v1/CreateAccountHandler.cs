@@ -69,7 +69,7 @@ public class CreateAccountHandler(
 
             await this._accountRepository.AddAsync(account, cancellationToken);
 
-            return new CreateAccountResponse(account.AccountNumber);
+            return new CreateAccountResponse {AccountNumber = account.AccountNumber};
         }
         catch (CustomException ex)
         {
