@@ -193,7 +193,7 @@ public void Deposit(decimal amount)
   this.AccountBalance += amount;
 }
 ```
-## [Api Documentation](ApiDocumentation.md)
+## [Api Documentation](/Bank/apidocumentation/)
 
 ## Structured Logging
 
