@@ -60,7 +60,7 @@ public sealed class AccountController(IOptions<ApiOptions> apiOptions, ILogger<A
         OperationId = nameof(CreateAccountAsync),
         Description = "Creates an account.",
         Tags = ["Account"])]
-    [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(CreateAccountResponse))]
+    [SwaggerResponse(StatusCodes.Status201Created, Type = typeof(CreateAccountResponse))]
     [SwaggerResponse(StatusCodes.Status400BadRequest, Type = typeof(BadRequest<ProblemDetails>))]
     [SwaggerResponse(StatusCodes.Status500InternalServerError, Type = typeof(ProblemDetails))]
     public async Task<Results<Created<CreateAccountResponse>, BadRequest<ProblemDetails>>> CreateAccountAsync(
