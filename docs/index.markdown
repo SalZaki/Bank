@@ -123,7 +123,7 @@ docker-compose up
   "DocumentationUrl": "api/v1/documentation/",
   "BannerEnabled": true,
   "Authorization": {
-    "ApiKey": "b481d913-aef1-4913-b8b6-d890a89e22d3"
+    "ApiKey": "607F6A23-D130-46CD-A93C-6D9A6E5A8FB2"
   }
 }
 ```
