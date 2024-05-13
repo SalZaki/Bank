@@ -21,10 +21,10 @@ BUILD_INFO ?= "Local makefile build"
 .PHONY: help check docker-lint docker-start docker-stop lint lint-fix clean install-docs build-docs serve-docs run-docs clean-docs build-docker-docs serve-docker-docs clean-certs
 .DEFAULT_GOAL := help
 
-help:  ## 💬 This help message :)
+help:  ## 💬 This help message
 	@$(SCRIPTS_DIR)/Makefile_help.sh ./Makefile
 
-check: ## 
+check: ## 🔍 Checks installed dependencies on local machine
 	@echo "🔍 Checking installed dependencies..."
 	@echo "dotnet Version -" $(shell dotnet --version)
 	@echo "node Version -" $(shell node --version)
@@ -56,7 +56,7 @@ docker-stop: ## 🏃 Stops bank.api container using Docker compose
 	docker compose -f docker-compose.yml down
 	@echo "✅ Done stopping bank-api locally using Dotnet CLI."
 
-lint: ## 🔎 Checks for linting and formatting errors in bank-api
+lint: ## 🔎 Checks for linting and formatting errors in code
 	@echo "🔎 Checking for linting and formatting errors in bank api..."
 	@cd $(BANK_API_DIR) && \
 	dotnet format --verbosity detailed --verify-no-changes Payment.Bank.Api.csproj
@@ -82,29 +82,29 @@ install-docs: ## 🛠️ Installs necessary dependencies to build docs in Ruby
 	bundle install
 	@echo "✅ Done Installing dependencies."
 
-build-docs: ## 🔨 Builds docs on local machine.
+build-docs: ## 🔨 Builds docs on local machine
 	@echo "🔨️ Building docs..."
 	@cd $(DOCS_DIR) && \
 	bundle install; bundle exec jekyll build --drafts
 	@echo "✅ Done building docs."
 
-serve-docs: ## 🏃️ Runs project docs. This does not listen for changes.
+serve-docs: ## 🏃️ Runs project docs (this does not listen for changes)
 	@echo "🏃 Running project docs"
 	@cd $(DOCS_DIR) && \
 	bundle exec jekyll serve
 	@echo "✅ Done running project docs."
 
-run-docs: ## 🤖 Runs project docs. This listens for changes.
+run-docs: ## 🤖 Runs project docs (this listens for changes)
 	@echo "🤖️ Runs project docs..."
 	@cd $(DOCS_DIR) && \
 	bundle install; bundle exec jekyll serve --drafts --incremental --config _config.yml
 	@echo "✅ Done running project docs." 
 
-clean-docs:  ## 🧹 Cleans docs
-	@echo "🔨️ Cleaning docs..."
+clean-docs:  ## 🧹 Cleans docs site
+	@echo "🔨️ Cleaning docs site..."
 	@cd $(DOCS_DIR) && \
 	bundle exec jekyll clean
-	@echo "✅ Done cleaning docs."
+	@echo "✅ Done cleaning docs site."
 
 build-docker-docs:
 	docker run --rm \
@@ -124,17 +124,17 @@ serve-docker-docs:
 #########################################################
 # certs targets
 ######################################################### 
-check-certs: ## 🔍 Checks development certs.
+check-certs: ## 🔍 Checks development certs
 	@echo "🔍 Checking development certs..."
 	dotnet dev-certs https --check --trust
 	@echo "✅ Done checking development certs."
 
-clean-certs: ## 🤖 Cleans up development certs.
+clean-certs: ## 🤖 Cleans up development certs
 	@echo "🤖️ Cleaning development certs..."
 	dotnet dev-certs https --clean
 	@echo "✅ Done cleaning development certs." 
 
-install-certs: ## 🔐 Installs development certs.
+install-certs: ## 🔐 Installs development certs
 	@echo "🔐️ Installing development certs..."
 	dotnet dev-certs https -ep ${HOME}/.aspnet/https/aspnetapp.pfx -p devcertpassword --trust
 	@echo "✅ Done installing development certs."

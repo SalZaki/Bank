@@ -19,7 +19,7 @@ This microservice provides banking functionalities through a clean architecture 
 ## Solution Structure
 
 ````
-bank/
+📂 bank/
 │
 ├── src/
 │   ├── Payment.Bank.Api/
@@ -79,6 +79,28 @@ Navigate to the project directory:
 ````shell
 cd bank
 ````
+
+### Makefile Reference
+
+```text
+  build-docs                    🔨 Builds docs on local machine
+  check-certs                   🔍 Checks development certs
+  check                         🔍 Checks installed dependencies on local machine
+  clean-certs                   🤖 Cleans up development certs
+  clean-docs                    🧹 Cleans docs site
+  clean                         🧹 Cleans up project
+  docker-build                  🏃 Builds bank.api container using Docker compose
+  docker-lint                   🐳 Lints Dockerfile
+  docker-start                  🏃 Stars bank.api container using Docker compose
+  docker-stop                   🏃 Stops bank.api container using Docker compose
+  help                          💬 This help message
+  install-certs                 🔐 Installs development certs
+  install-docs                  🛠️ Installs necessary dependencies to build docs in Ruby
+  lint-fix                      🔧 Lints & formats, fixes errors and modifies code
+  lint                          🔎 Checks for linting and formatting errors in code
+  run-docs                      🤖 Runs project docs (this listens for changes)
+  serve-docs                    🏃️ Runs project docs (this does not listen for changes)
+```
 
 Build the project:
 ````shell
