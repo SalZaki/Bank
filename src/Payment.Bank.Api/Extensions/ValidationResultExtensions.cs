@@ -1,4 +1,4 @@
-using FluentValidation.Results;
+﻿using FluentValidation.Results;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,4 +28,3 @@ public static class ValidationResultExtensions
         return TypedResults.BadRequest(problemDetails);
     }
 }
-

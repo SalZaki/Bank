@@ -1,17 +1,17 @@
+﻿using System.ComponentModel.DataAnnotations;
 using Ardalis.GuardClauses;
-using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.FeatureManagement.Mvc;
-using Swashbuckle.AspNetCore.Annotations;
-using Payment.Bank.Api.Options;
 using Payment.Bank.Api.Extensions;
+using Payment.Bank.Api.Options;
 using Payment.Bank.Application.Accounts.Features.ActivateAccount.v1;
-using Payment.Bank.Application.Accounts.Services;
-using Payment.Bank.Application.Accounts.Features.GetAccount.v1;
 using Payment.Bank.Application.Accounts.Features.CreateAccount.v1;
 using Payment.Bank.Application.Accounts.Features.DeactivateAccount.v1;
+using Payment.Bank.Application.Accounts.Features.GetAccount.v1;
+using Payment.Bank.Application.Accounts.Services;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace Payment.Bank.Api.Controllers.Accounts.v1;
 

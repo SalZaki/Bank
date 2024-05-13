@@ -1,4 +1,4 @@
-using Microsoft.FeatureManagement;
+﻿using Microsoft.FeatureManagement;
 using Microsoft.FeatureManagement.Mvc;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
@@ -23,7 +23,8 @@ public sealed class FeatureGateDocumentFilter(IFeatureManager featureManager) : 
 
             var featureGateAttribute = filterMetaData as FeatureGateAttribute;
 
-            var isActive = featureManager.IsEnabledAsync(featureGateAttribute?.Features.Single())
+            var isActive = featureManager
+                .IsEnabledAsync(featureGateAttribute?.Features.Single())
                 .GetAwaiter()
                 .GetResult();
 

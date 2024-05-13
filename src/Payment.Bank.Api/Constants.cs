@@ -1,4 +1,4 @@
-namespace Payment.Bank.Api;
+﻿namespace Payment.Bank.Api;
 
 public static class Constants
 {

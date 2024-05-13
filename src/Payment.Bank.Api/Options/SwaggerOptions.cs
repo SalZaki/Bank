@@ -1,4 +1,4 @@
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.OpenApi.Models;
 
 namespace Payment.Bank.Api.Options;

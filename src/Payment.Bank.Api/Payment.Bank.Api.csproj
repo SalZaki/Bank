@@ -10,7 +10,7 @@
     <NeutralLanguage>en-GB</NeutralLanguage>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
-  <ItemGroup>
+  <ItemGroup Label="Packages">
     <PackageReference Include="Ardalis.GuardClauses" />
     <PackageReference Include="Figgle" />
     <PackageReference Include="Bogus" />

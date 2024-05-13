@@ -57,18 +57,18 @@ public class GetAccountHandler(
                 .FindOneAsync(x => x.AccountNumber == accountNumber, cancellationToken)
                 .ConfigureAwait(false);
 
-            if (account == Account.NotFound)
+            if (account != Account.NotFound)
             {
-                this._logger.Log(LogLevel.Warning, "Account with account number {accountNumber} does not exist", accountNumber);
-
-               return new NotFound();
+                return this._mapper.Map(account);
             }
 
-            return this._mapper.Map(account);
+            this._logger.Log(LogLevel.Warning, "Account with account number {accountNumber} does not exist", accountNumber);
+
+            return new NotFound();
         }
         catch (CustomException ex)
         {
-            this._logger.Log(LogLevel.Error, "{Message}, {ErrorMessages}, {StatusCode}", ex.Message, ex.ErrorMessages, ex.StatusCode);
+            this._logger.Log(LogLevel.Error, "{Message}, {StatusCode}", ex.Message, ex.StatusCode);
 
             throw;
         }

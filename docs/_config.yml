@@ -1,13 +1,13 @@
 title: Bank Microservice
-email: salzaki@example.com
-description: Bank Microservice pages.
+email: salzaki@hotmail.com
+description: Bank Microservice project web site.
 baseurl: ""
 url: ""
 twitter_username: sal_zaki
 github_username:  salzaki
 
 aux_links:
-  "SalZaki.Bank on GitHub": https://github.com/salzaki/Bank
+  "salzaki.bank on GitHub": https://github.com/salzaki/Bank
 
 theme: just-the-docs
 plugins:

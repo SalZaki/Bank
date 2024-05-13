@@ -69,7 +69,7 @@ public class DeactivateAccountHandler(
         }
         catch (CustomException ex)
         {
-            this._logger.Log(LogLevel.Error, "{Message}, {ErrorMessages}, {StatusCode}", ex.Message, ex.ErrorMessages, ex.StatusCode);
+            this._logger.Log(LogLevel.Error, "{Message}, {StatusCode}", ex.Message, ex.StatusCode);
 
             throw;
         }
