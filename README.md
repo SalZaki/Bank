@@ -89,10 +89,10 @@ cd bank
   clean-certs                   🤖 Cleans up development certs
   clean-docs                    🧹 Cleans docs site
   clean                         🧹 Cleans up project
-  docker-build                  🏃 Builds bank.api container using Docker compose
+  docker-build                  🏃 Builds container using Docker compose
   docker-lint                   🐳 Lints Dockerfile
-  docker-start                  🏃 Stars bank.api container using Docker compose
-  docker-stop                   🏃 Stops bank.api container using Docker compose
+  docker-start                  🏃 Stars container using Docker compose
+  docker-stop                   🏃 Stops container using Docker compose
   help                          💬 This help message
   install-certs                 🔐 Installs development certs
   install-docs                  🛠️ Installs necessary dependencies to build docs in Ruby
@@ -102,41 +102,32 @@ cd bank
   serve-docs                    🏃️ Runs project docs (this does not listen for changes)
 ```
 
-Build the project:
+### Quick Start
+
+Build the project using `make`, from the root of the project run:
+
 ````shell
-dotnet build
+make check-certs # run this to check is dev certs are installed
+make install-certs # install dev certs
+make docker-start
 ````
 
-Run the project:
-````shell
-dotnet run
-````
+Open [https://localhost:5001](http://localhost:5000)
 
-### Build and run using Docker Compose
+### Config Certificate
+You can also configure certs manually by running the following commands to [Configure SSL](https://docs.microsoft.com/en-us/aspnet/core/security/docker-compose-https?view=aspnetcore-6.0) in your system:
 
-#### Config Certificate
-Run the following commands to [Configure SSL](https://docs.microsoft.com/en-us/aspnet/core/security/docker-compose-https?view=aspnetcore-6.0) in your system:
-
-##### Windows using Linux containers
+#### Windows using Linux containers
 ```bash
 dotnet dev-certs https -ep %USERPROFILE%\.aspnet\https\aspnetapp.pfx -p password
 dotnet dev-certs https --trust
 ```
 ***Note:** for running this command in `powershell` use `$env:USERPROFILE` instead of `%USERPROFILE%`*
 
-##### macOS or Linux
+#### macOS or Linux
 ```bash
 dotnet dev-certs https -ep ${HOME}/.aspnet/https/aspnetapp.pfx -p $CREDENTIAL_PLACEHOLDER$
 dotnet dev-certs https --trust
-```
-#### Docker Compose
-
-You can also build and run whole application using [docker compose](https://docs.docker.com/compose/) from root folder:
-
-To run this app in `Docker`, use the [docker-compose.yaml](./deployments/docker-compose/docker-compose.yaml) and execute the below command at the `root` of the application:
-
-```bash
-docker-compose -f docker-compose.yaml up -d
 ```
 
 ![Docker](assets/Docker.png)
