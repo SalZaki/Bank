@@ -24,7 +24,8 @@ public class ActivateAccountHandler(
     private readonly FluentValidation.IValidator<ActivateAccountCommand> _validator =
         Guard.Against.Null(validator, nameof(validator));
 
-    private readonly ILogger _logger = Guard.Against.Null(logger, nameof(logger));
+    private readonly ILogger _logger =
+        Guard.Against.Null(logger, nameof(logger));
 
     public async Task<OneOf<ActivateAccountResponse, ReadOnlyCollection<ValidationFailure>, NotFound>> HandleAsync(
         ActivateAccountCommand command,
@@ -52,9 +53,10 @@ public class ActivateAccountHandler(
     {
         try
         {
-            var accountResult = await this.GetAccountAsync(AccountNumber.Create(command.AccountNumber), cancellationToken);
+            var accountResult =
+                await this.GetAccountAsync(AccountNumber.Create(command.AccountNumber), cancellationToken);
 
-            if(accountResult.TryPickT1(out var notFound, out var account))
+            if (accountResult.TryPickT1(out var notFound, out var account))
             {
                 return notFound;
             }
@@ -67,7 +69,7 @@ public class ActivateAccountHandler(
         }
         catch (CustomException ex)
         {
-            this._logger.Log(LogLevel.Error, "{Message}, {ErrorMessages}, {StatusCode}", ex.Message, ex.ErrorMessages, ex.StatusCode);
+            this._logger.Log(LogLevel.Error, "{Message}, {StatusCode}", ex.Message, ex.StatusCode);
 
             throw;
         }

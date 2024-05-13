@@ -1,4 +1,4 @@
-using Payment.Bank.Api.Extensions;
+﻿using Payment.Bank.Api.Extensions;
 using Serilog;
 using Serilog.Events;
 
@@ -45,6 +45,7 @@ try
     app.UseSwaggerEndpoints();
     app.UseCorsPolicy();
     app.MapControllers();
+    app.UseHttpsRedirection();
 
     await app.RunAsync();
 }

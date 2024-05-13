@@ -1,6 +1,7 @@
+using System.Net;
+using Payment.Bank.Common.Exceptions;
+
 namespace Payment.Bank.Domain.Exceptions;
 
-public class DomainException
-{
-    
-}
+public abstract class DomainException(string message, HttpStatusCode statusCode)
+    : CustomException(message, statusCode);

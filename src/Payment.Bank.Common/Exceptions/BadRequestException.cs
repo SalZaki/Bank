@@ -1,6 +1,6 @@
-using Microsoft.AspNetCore.Http;
+using System.Net;
 
 namespace Payment.Bank.Common.Exceptions;
 
-public sealed class BadRequestException(string message, Exception? innerException = null)
-    : CustomException(message, StatusCodes.Status400BadRequest, innerException);
+public abstract class BadRequestException(string message, Exception? innerException = null)
+    : CustomException(message, HttpStatusCode.BadRequest, innerException);

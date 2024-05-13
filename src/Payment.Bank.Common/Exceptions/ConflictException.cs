@@ -1,6 +1,6 @@
-using Microsoft.AspNetCore.Http;
+using System.Net;
 
 namespace Payment.Bank.Common.Exceptions;
 
 public sealed class ConflictException(string message, Exception? innerException = null)
-    : CustomException(message, StatusCodes.Status409Conflict, innerException);
+    : CustomException(message, HttpStatusCode.Conflict, innerException);

@@ -1,8 +1,8 @@
-using Microsoft.Extensions.Options;
-using Payment.Bank.Api.Options;
-using Ardalis.GuardClauses;
+﻿using Ardalis.GuardClauses;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.Extensions.Options;
 using Payment.Bank.Api.Middlewares;
+using Payment.Bank.Api.Options;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace Payment.Bank.Api.Extensions;

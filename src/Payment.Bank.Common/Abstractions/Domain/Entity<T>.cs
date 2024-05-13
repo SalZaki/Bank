@@ -1,5 +1,3 @@
-using Payment.Bank.Common.Exceptions;
-
 namespace Payment.Bank.Common.Abstractions.Domain;
 
 public abstract record Entity<TId>(TId Id) : IEntity<TId>

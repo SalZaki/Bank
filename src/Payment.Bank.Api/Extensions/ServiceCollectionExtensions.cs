@@ -1,18 +1,18 @@
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using Ardalis.GuardClauses;
 using Bogus;
 using FluentValidation;
-using Microsoft.Extensions.Options;
-using Microsoft.FeatureManagement;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Spectre.Console;
+using Microsoft.Extensions.Options;
+using Microsoft.FeatureManagement;
 using Payment.Bank.Api.Options;
 using Payment.Bank.Api.Swagger;
 using Payment.Bank.Application.Accounts.Features.ActivateAccount.v1;
 using Payment.Bank.Application.Accounts.Features.CreateAccount.v1;
 using Payment.Bank.Application.Accounts.Features.DeactivateAccount.v1;
 using Payment.Bank.Application.Accounts.Features.GetAccount.v1;
+using Spectre.Console;
 
 namespace Payment.Bank.Api.Extensions;
 

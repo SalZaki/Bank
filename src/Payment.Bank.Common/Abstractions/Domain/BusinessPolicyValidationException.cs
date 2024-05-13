@@ -4,7 +4,7 @@ public sealed class BusinessPolicyValidationException(IBusinessPolicy businessPo
     : Exception(businessPolicy.Message)
 {
     public IBusinessPolicy InvalidPolicy { get; } = businessPolicy;
-    
+
     public override string ToString()
     {
         return $"{this.InvalidPolicy.GetType().FullName}: {this.InvalidPolicy.Message}";

@@ -9,7 +9,4 @@
     <RootNamespace>Payment.Bank.Common</RootNamespace>
     <NeutralLanguage>en-GB</NeutralLanguage>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" />
-  </ItemGroup>
 </Project>
