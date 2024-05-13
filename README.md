@@ -92,15 +92,31 @@ dotnet run
 
 ### Build and run using Docker Compose
 
-You can build and run whole application using [docker compose](https://docs.docker.com/compose/) from root folder:
+#### Config Certificate
+Run the following commands to [Configure SSL](https://docs.microsoft.com/en-us/aspnet/core/security/docker-compose-https?view=aspnetcore-6.0) in your system:
 
-````shell
-docker-compose build
-````
+##### Windows using Linux containers
+```bash
+dotnet dev-certs https -ep %USERPROFILE%\.aspnet\https\aspnetapp.pfx -p password
+dotnet dev-certs https --trust
+```
+***Note:** for running this command in `powershell` use `$env:USERPROFILE` instead of `%USERPROFILE%`*
 
-````shell
-docker-compose up
-````
+##### macOS or Linux
+```bash
+dotnet dev-certs https -ep ${HOME}/.aspnet/https/aspnetapp.pfx -p $CREDENTIAL_PLACEHOLDER$
+dotnet dev-certs https --trust
+```
+#### Docker Compose
+
+You can also build and run whole application using [docker compose](https://docs.docker.com/compose/) from root folder:
+
+To run this app in `Docker`, use the [docker-compose.yaml](./deployments/docker-compose/docker-compose.yaml) and execute the below command at the `root` of the application:
+
+```bash
+docker-compose -f docker-compose.yaml up -d
+```
+
 ![Docker](assets/Docker.png)
 
 ### AppSettings
