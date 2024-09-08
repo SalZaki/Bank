@@ -1,28 +1,45 @@
 ---
-name: User Story
-about: Create a User Story to help us improve this software
-title: "[USER STORY] "
-labels: ''
-assignees: ''
+name: 👤 User Story
+about: A template for creating user stories in the project
+title: 'User-Story: '
+labels: User Story
+---
+
+### 👤 User Story: [User Story Title]
+
+**As a** [user role],  
+**I want** [desired feature],  
+**So that** [reason/benefit].
 
 ---
 
-<!-- ⚠️⚠️ Do Not Delete This! feature_request_template ⚠️⚠️ -->
-<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->
-<!-- Please search existing issues to avoid creating duplicates. -->
-<!-- Describe the feature you'd like. -->
+### 🛠️ Technical Details
 
-## User Story
+- Add any technical implementation notes here.
+- Mention specific tools, libraries, or components involved.
 
-As a [type of user], I want [an action] so that [benefit/value].
+---
 
-## Acceptance Criteria
+### 🔗 Related Feature
 
-- [Detailed condition 1]
-- [Detailed condition 2]
-- ...
+- Feature: #issue-number
 
-## Additional Information
+---
 
-- Business value: [High/Medium/Low]
-- Reference to Epic: #123
+### 📝 Additional Notes
+
+Add any further notes or supporting details here.
+
+---
+
+### 🎯 Acceptance Criteria
+
+- [ ] Criterion 1
+- [ ] Criterion 2
+- [ ] Criterion 3
+
+---
+
+### 📅 Deadline
+
+- Target completion date: [enter date]
