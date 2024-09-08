@@ -12,14 +12,10 @@ assignees: ''
 **Description:**  
 Briefly describe the purpose and outcome of this epic.
 
----
-
 ### 🎯 Goal
 
 - What is the goal or purpose of this epic?
 - Why are we creating it?
-
----
 
 ### 🛠️ Deliverables
 
@@ -27,21 +23,15 @@ Briefly describe the purpose and outcome of this epic.
 - [ ] Feature 2
 - [ ] Feature 3
 
----
-
 ### 🌐 Context
 
 - Provide links to related epics or features.
 - Any dependencies or additional background?
 
----
-
 ### 📅 Timeline
 
 - **Start Date:** [enter date]
 - **Target Completion Date:** [enter date]
-
----
 
 ### 🧑‍💻 Stakeholders
 

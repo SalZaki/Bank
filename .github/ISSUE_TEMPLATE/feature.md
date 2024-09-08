@@ -12,13 +12,9 @@ assignees: ''
 **Description:**  
 Provide a detailed description of the feature. What functionality does it add or enhance? How does it relate to the larger Epic?
 
----
-
 ### 🎯 Objectives
 - Objective 1
 - Objective 2
-
----
 
 ### 🎯 Acceptance Criteria
 
@@ -26,21 +22,15 @@ Provide a detailed description of the feature. What functionality does it add or
 - [ ] Criterion 2
 - [ ] Criterion 3
 
----
-
 ### 🛠️ Technical Details
 
 - Implementation notes or specific tools, libraries, or components to be used.
 - Any architecture considerations?
 
----
-
 ### 🌐 Context
 
 - Link to the related epic.
 - Any dependencies or considerations with other features?
-
----
 
 ### 📅 Timeline
 
