@@ -48,12 +48,12 @@ docker-build: ## 🏃 Builds bank.api container using Docker compose
 
 docker-start: ## 🏃 Stars bank.api container using Docker compose
 	@echo "🏃‍ Staring bank-api locally using Dotnet CLI..."
-	docker compose -f docker-compose.yml up -d
+	docker-compose -f docker-compose.yml up -d
 	@echo "✅ Done staring bank-api locally using Dotnet CLI."
 
 docker-stop: ## 🏃 Stops bank.api container using Docker compose
 	@echo "🏃‍ Stopping bank-api locally using Dotnet CLI..."
-	docker compose -f docker-compose.yml down
+	docker-compose -f docker-compose.yml down
 	@echo "✅ Done stopping bank-api locally using Dotnet CLI."
 
 lint: ## 🔎 Checks for linting and formatting errors in code
