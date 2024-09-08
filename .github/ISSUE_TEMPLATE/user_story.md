@@ -11,34 +11,24 @@ labels: User Story
 **I want** [desired feature],  
 **So that** [reason/benefit].
 
----
-
 ### 🛠️ Technical Details
 
 - Add any technical implementation notes here.
 - Mention specific tools, libraries, or components involved.
 
----
-
 ### 🔗 Related Feature
 
 - Feature: #issue-number
 
----
-
 ### 📝 Additional Notes
 
 Add any further notes or supporting details here.
-
----
 
 ### 🎯 Acceptance Criteria
 
 - [ ] Criterion 1
 - [ ] Criterion 2
 - [ ] Criterion 3
-
----
 
 ### 📅 Deadline
 
