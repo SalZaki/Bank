@@ -1,5 +1,4 @@
-﻿name: bank-api
-version: "3.9"
+﻿name: bank
 
 # =====================================================================
 #  Docker compose file for bank-api, bank-seq
@@ -33,7 +32,7 @@ services:
       - ASPNETCORE_PATHBASE=/bank-api
       - ASPNETCORE_Kestrel__Certificates__Default__Password=devcertpassword
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
-      - BANK_Serilog:WriteTo:1:Args:serverUrl=http://bank.seq:80
+      - BANK_Serilog:WriteTo:1:Args:serverUrl=http://bank-seq:80
     volumes:
       - ~/.aspnet/https:/https:ro
     networks:
