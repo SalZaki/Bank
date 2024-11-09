@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <MicrosoftConfigurationVersion>8.0.0</MicrosoftConfigurationVersion>
+    <MicrosoftDependencyInjectionVersion>7.0.0</MicrosoftDependencyInjectionVersion>
+    <MicrosoftLoggingVersion>7.0.0</MicrosoftLoggingVersion>
+    <MicrosoftOptionsVersion>8.0.0</MicrosoftOptionsVersion>
+    <SwashbuckleVersion>6.9.0</SwashbuckleVersion>
+    <MicrosoftEntityFrameworkCore>8.0.7</MicrosoftEntityFrameworkCore>
+    <ApiVersion>8.1.0</ApiVersion>
+  </PropertyGroup>
+</Project>
