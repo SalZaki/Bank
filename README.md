@@ -6,10 +6,10 @@
 This microservice provides banking functionalities through a clean architecture approach, utilizing Domain-Driven Design (DDD) principles, built using the latest version of .NET Core i.e. `.NET 8.0`
 
 ## Features
-- Create new bank accounts
-- Retrieve existing bank accounts
-- Activate existing bank accounts
-- Deactivate existing bank accounts
+- Create a new bank account
+- Retrieve an existing bank account
+- Activate an existing bank account
+- Deactivate an existing bank account
 
 ## Technologies Used
 <a href="https://dotnet.microsoft.com/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" width="54" height="54" alt="dotnet" style="vertical-align:top; margin:4px;" /></a>
